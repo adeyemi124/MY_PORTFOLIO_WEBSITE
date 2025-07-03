@@ -29,7 +29,7 @@ const Cloudinary = () => {
       console.error("Upload failed", err);
     }
   };
-
+ 
   return (
     <div className="p-4">
       <input type="file" onChange={handleImageChange} />

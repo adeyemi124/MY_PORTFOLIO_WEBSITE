@@ -6,7 +6,7 @@ const AboutSection = () => (
       <div className="flex flex-col md:flex-row items-center gap-12">
         <div className="md:w-1/2">
           <img
-            src="https://readdy.ai/api/search-image?query=A%20professional%20portrait%20of%20a%20developer%20in%20a%20modern%20office%20environment%20with%20soft%20natural%20lighting%2C%20working%20on%20multiple%20screens%20with%20code%20visible%2C%20wearing%20smart%20casual%20attire%20with%20a%20confident%20expression&width=600&height=600&seq=9&orientation=squarish"
+            src="https://readdy.ai/api/search-image?query=A%20professional%20portrait%20of%20a%20developer%20in%20a%20modern%20office%20environment%20with%20soft%20natural%20lighting%2C%20working%20on%20multiple%20screens%20with%20code%20visible%2C%20wearing%20smart%20casual%20attire%20with%20a%20confident%20expression&width=600&height=600&seq=9&orientation=squaris"
             alt="Developer portrait"
             className="rounded-xl shadow-xl w-full h-auto"
           />
