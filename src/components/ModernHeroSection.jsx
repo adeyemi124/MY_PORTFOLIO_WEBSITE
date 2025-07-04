@@ -78,7 +78,7 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
             {/* CTA Buttons */}
             <div className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transition-all duration-1000 delay-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <a
-                href="https://github.com/your-github-username"
+                href="https://github.com/adeyemi124"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 relative overflow-hidden"
