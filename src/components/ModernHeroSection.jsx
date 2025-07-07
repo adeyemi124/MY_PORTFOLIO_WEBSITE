@@ -89,7 +89,7 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
                 GitHub
               </a>
               <a
-                href="https://wa.me/2349035508681"
+                href="https://wa.link/jjko7t"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center border-2 border-green-500/50 text-green-400 px-8 py-4 rounded-xl font-semibold hover:bg-green-500/20 hover:border-green-500 transition-all duration-300 backdrop-blur-sm"
