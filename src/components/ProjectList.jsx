@@ -58,9 +58,32 @@ const ProjectList = ({ projects = [] }) => {
     setHoveredCard(null);
   };
 
+  // Update the images to match the project descriptions with more specific images
+  const updatedProjects = projects.map((project) => {
+    let image = project.image;
+    if (project.title.includes('ApplyEase')) {
+      image = 'https://plus.unsplash.com/premium_photo-1661484773497-5825e7cbd902?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGpvYiUyMHNlZWtlcnN8ZW58MHx8MHx8fDA%3D'; // Resume/CV/AI
+    } else if (project.title.includes('Insightpilot')) {
+      image = 'https://plus.unsplash.com/premium_photo-1665203411542-6fdb1f1929b5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGRlY2lzaW9uJTIwbWFraW5nfGVufDB8fDB8fHww'; // Analytics/Dashboard
+    } else if (project.title.includes('AI Suite')) {
+      image = 'https://images.unsplash.com/photo-1627244714766-94dab62ed964?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29udGVudCUyMGNyZWF0b3J8ZW58MHx8MHx8fDA%3D'; // Content/AI
+    } else if (project.title.includes('URL Shortener')) {
+      image = 'https://media.istockphoto.com/id/1221997075/photo/url-concept-on-wooden-cubes-on-a-keyboard.webp?a=1&b=1&s=612x612&w=0&k=20&c=Bqh6Vo_WKqIvQl0KpvT_tmVPJ4hwn1_3uT0uucPmwHQ='; // Shortened URL on screen
+    } else if (project.title.includes('Transfera Bank')) {
+      image = 'https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&w=600&q=80'; // Modern banking/fintech interface (Pexels, reliable)
+    } else if (project.title.includes('Oreoluwa')) {
+      image = 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80'; // Portfolio/Personal
+    } else if (project.title.includes('OAP')) {
+      image = 'https://images.unsplash.com/photo-1581368087049-7034ed0d1e6f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmFkaW8lMjBwcmVzZW50ZXJ8ZW58MHx8MHx8fDA%3D'; // Media/Personality
+    } else if (project.title.includes('Photographer')) {
+      image = 'https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGhvdG9ncmFwaGVyfGVufDB8fDB8fHww'; // Photography
+    }
+    return { ...project, image };
+  });
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000">
-      {projects.map((project, idx) => (
+      {updatedProjects.map((project, idx) => (
         <div
           key={idx}
           ref={(el) => (cardRefs.current[idx] = el)}
