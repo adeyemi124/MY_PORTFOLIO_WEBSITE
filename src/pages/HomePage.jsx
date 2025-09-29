@@ -135,40 +135,40 @@ const HomePage = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
             <div className="flex items-center">
-                <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer">Adebayo Adeyemi</span>
+                <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer">Adebayo Adeyemi</span>
             </div>
             <div className="hidden md:flex items-center space-x-10">
                 <button
                     onClick={() => scrollToSection('services')}
-                    className="group text-gray-700 hover:text-blue-600 transition-colors duration-300 cursor-pointer whitespace-nowrap relative text-lg"
+                    className="group text-gray-700 hover:text-green-600 transition-colors duration-300 cursor-pointer whitespace-nowrap relative text-lg"
                 >
                     Services
-                    <span className="absolute left-0 bottom-[-2px] w-0 h-0.5 bg-blue-600 transition-all duration-300 ease-out group-hover:w-full"></span>
+                    <span className="absolute left-0 bottom-[-2px] w-0 h-0.5 bg-green-600 transition-all duration-300 ease-out group-hover:w-full"></span>
                 </button>
                 <button
                     onClick={() => scrollToSection('projects')}
-                    className="group text-gray-700 hover:text-blue-600 transition-colors duration-300 cursor-pointer whitespace-nowrap relative text-lg"
+                    className="group text-gray-700 hover:text-green-600 transition-colors duration-300 cursor-pointer whitespace-nowrap relative text-lg"
                 >
                     Projects
-                    <span className="absolute left-0 bottom-[-2px] w-0 h-0.5 bg-blue-600 transition-all duration-300 ease-out group-hover:w-full"></span>
+                    <span className="absolute left-0 bottom-[-2px] w-0 h-0.5 bg-green-600 transition-all duration-300 ease-out group-hover:w-full"></span>
                 </button>
                 <button
                     onClick={() => scrollToSection('about')}
-                    className="group text-gray-700 hover:text-blue-600 transition-colors duration-300 cursor-pointer whitespace-nowrap relative text-lg"
+                    className="group text-gray-700 hover:text-green-600 transition-colors duration-300 cursor-pointer whitespace-nowrap relative text-lg"
                 >
                     About Me
-                    <span className="absolute left-0 bottom-[-2px] w-0 h-0.5 bg-blue-600 transition-all duration-300 ease-out group-hover:w-full"></span>
+                    <span className="absolute left-0 bottom-[-2px] w-0 h-0.5 bg-green-600 transition-all duration-300 ease-out group-hover:w-full"></span>
                 </button>
                 <button
                     onClick={() => scrollToSection('contact')}
-                    className="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer whitespace-nowrap overflow-hidden text-lg"
+                    className="relative bg-gradient-to-r from-green-600 to-green-500 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer whitespace-nowrap overflow-hidden text-lg"
                 >
                     <span className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-10"></span>
                     Contact Me
                 </button>
             </div>
             <div className="md:hidden flex items-center">
-                <button className="text-gray-700 hover:text-blue-600 transition-colors duration-300 cursor-pointer">
+                <button className="text-gray-700 hover:text-green-600 transition-colors duration-300 cursor-pointer">
                     <i className="fas fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -226,4 +226,3 @@ const HomePage = () => {
 }
 
 export default HomePage;
-

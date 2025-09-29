@@ -11,8 +11,8 @@ const ContactSection = () => (
           </p>
           <div className="space-y-6">
             <div className="flex items-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                <i className="fas fa-envelope text-blue-600"></i>
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                <i className="fas fa-envelope text-green-600"></i>
               </div>
               <div>
                 <h3 className="text-lg font-semibold">Email</h3>
@@ -20,8 +20,8 @@ const ContactSection = () => (
               </div>
             </div>
             <div className="flex items-center">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                <i className="fas fa-map-marker-alt text-purple-600"></i>
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                <i className="fas fa-map-marker-alt text-green-600"></i>
               </div>
               <div>
                 <h3 className="text-lg font-semibold">Location</h3>
@@ -29,8 +29,8 @@ const ContactSection = () => (
               </div>
             </div>
             <div className="flex items-center">
-              <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
-                <i className="fas fa-clock text-indigo-600"></i>
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                <i className="fas fa-clock text-green-600"></i>
               </div>
               <div>
                 <h3 className="text-lg font-semibold">Availability</h3>
@@ -41,16 +41,16 @@ const ContactSection = () => (
           <div className="mt-10">
             <h3 className="text-lg font-semibold mb-4">Connect With Me</h3>
             <div className="flex space-x-4">
-              <a href="https://github.com/adeyemi124" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors cursor-pointer">
+              <a href="https://github.com/adeyemi124" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">
                 <i className="fab fa-github"></i>
               </a>
-              <a href="https://www.linkedin.com/in/adebayoadeyemiaa" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors cursor-pointer">
+              <a href="https://www.linkedin.com/in/adebayoadeyemiaa" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors cursor-pointer">
+              <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">
                 <i className="fab fa-twitter"></i>
               </a>
-              {/* <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors cursor-pointer">
+              {/* <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">
                 <i className="fab fa-dribbble"></i>
               </a> */}
             </div>
@@ -64,7 +64,7 @@ const ContactSection = () => (
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors text-sm"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-colors text-sm"
                   placeholder="John Doe"
                 />
               </div>
@@ -73,7 +73,7 @@ const ContactSection = () => (
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors text-sm"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-colors text-sm"
                   placeholder="john@example.com"
                 />
               </div>
@@ -82,7 +82,7 @@ const ContactSection = () => (
                 <input
                   type="text"
                   id="subject"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors text-sm"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-colors text-sm"
                   placeholder="Project Inquiry"
                 />
               </div>
@@ -91,13 +91,13 @@ const ContactSection = () => (
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors text-sm"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-colors text-sm"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg shadow-md hover:shadow-lg transition-all !rounded-button cursor-pointer whitespace-nowrap"
+                className="w-full bg-gradient-to-r from-green-600 to-green-500 text-white py-3 rounded-lg shadow-md hover:shadow-lg transition-all !rounded-button cursor-pointer whitespace-nowrap"
               >
                 Send Message
               </button>

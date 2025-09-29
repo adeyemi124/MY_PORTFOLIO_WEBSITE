@@ -18,12 +18,12 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
   const visible = typeof parentVisible === 'boolean' ? parentVisible : isVisible;
 
   return (
-    <section className="relative min-h-screen pt-20 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
+    <section className="relative min-h-screen pt-20 overflow-hidden bg-green-900">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/2 right-1/4 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
-        <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl animate-pulse animation-delay-4000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 right-1/4 w-80 h-80 bg-green-500/20 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
+        <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-green-500/20 rounded-full blur-3xl animate-pulse animation-delay-4000"></div>
       </div>
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 opacity-10">
@@ -43,18 +43,18 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
             </div>
             {/* Main Heading */}
             <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <span className="text-white">Building</span>
+              <span className="text-white">We Build</span>
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-gradient-x">
+              <span className="text-green-400">
                 Digital Solutions
               </span>
               <br />
-              <span className="text-white">To Your Problems</span>
+              <span className="text-white">To Problems</span>
             </h1>
             {/* Dynamic Tech Stack */}
             <div className={`mb-8 transition-all duration-1000 delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <p className="text-gray-300 text-lg mb-4">
-                Specializing in <span className="text-blue-400 font-semibold transition-all duration-500">{techStack[currentTech]}</span>
+                Specializing in <span className="text-green-400 font-semibold transition-all duration-500">{techStack[currentTech]}</span>
               </p>
               <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                 {techStack.map((tech, index) => (
@@ -62,7 +62,7 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
                     key={tech}
                     className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-500 ${
                       index === currentTech
-                        ? 'bg-blue-500/30 text-blue-300 border border-blue-500/50'
+                        ? 'bg-green-500/30 text-green-300 border border-green-500/50'
                         : 'bg-white/10 text-gray-400 border border-white/20'
                     }`}
                   >
@@ -81,9 +81,9 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
                 href="https://github.com/adeyemi124"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 relative overflow-hidden"
+                className="group flex items-center justify-center bg-green-700 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 relative overflow-hidden"
               >
-                <svg className="w-6 h-6 mr-2 text-white group-hover:text-blue-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 mr-2 text-white group-hover:text-green-200 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.304-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.984-.399 3.003-.404 1.018.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.625-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .32.218.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z" />
                 </svg>
                 GitHub
@@ -142,8 +142,8 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
                 </div>
                 {/* Central Developer Image */}
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
-                  <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
+              <div className="absolute inset-0 bg-green-600 rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
+                  <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
                     <img
                       src="https://res.cloudinary.com/dw1gzsri4/image/upload/v1751554367/WhatsApp_Image_2025-07-03_at_3.47.55_PM_l9layh.jpg"
                       alt="Developer workspace"
@@ -152,11 +152,11 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
                   </div>
                 </div>
                 {/* Floating Tech Icons */}
-                <div className="absolute top-16 -left-16 w-12 h-12 bg-blue-500/20 backdrop-blur-sm border border-blue-500/30 rounded-xl flex items-center justify-center animate-bounce">
-                  <span className="text-blue-400 font-bold text-sm">JS</span>
+                <div className="absolute top-16 -left-16 w-12 h-12 bg-green-500/20 backdrop-blur-sm border border-green-500/30 rounded-xl flex items-center justify-center animate-bounce">
+                  <span className="text-green-400 font-bold text-sm">JS</span>
                 </div>
-                <div className="absolute bottom-16 -right-16 w-12 h-12 bg-purple-500/20 backdrop-blur-sm border border-purple-500/30 rounded-xl flex items-center justify-center animate-bounce animation-delay-1000">
-                  <span className="text-purple-400 font-bold text-sm">TS</span>
+                <div className="absolute bottom-16 -right-16 w-12 h-12 bg-green-500/20 backdrop-blur-sm border border-green-500/30 rounded-xl flex items-center justify-center animate-bounce animation-delay-1000">
+                  <span className="text-green-400 font-bold text-sm">TS</span>
                 </div>
               </div>
             </div>

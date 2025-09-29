@@ -102,10 +102,10 @@ const ProjectList = ({ projects = [] }) => {
           onMouseLeave={() => handleMouseLeave(idx)}
         >
           {/* Animated Background Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 via-green-500/20 to-green-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x"></div>
           
           {/* Glow Effect */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+          <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-green-400 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
           
           {/* Image Container */}
           <div className="relative overflow-hidden">
@@ -117,7 +117,7 @@ const ProjectList = ({ projects = [] }) => {
             />
             
             {/* Floating Project Number */}
-            <div className="absolute top-4 left-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg z-20 transform group-hover:scale-110 transition-transform duration-300">
+            <div className="absolute top-4 left-4 w-12 h-12 bg-gradient-to-br from-green-500 to-green-400 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg z-20 transform group-hover:scale-110 transition-transform duration-300">
               {String(idx + 1).padStart(2, '0')}
             </div>
             
@@ -131,13 +131,13 @@ const ProjectList = ({ projects = [] }) => {
           {/* Content */}
           <div className="p-6 flex-1 flex flex-col relative z-10">
             {/* Title with Animated Underline */}
-            <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300 relative">
+            <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-green-600 group-hover:to-green-500 group-hover:bg-clip-text transition-all duration-300 relative">
               {project.title}
-              <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-500 delay-100"></div>
+              <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-green-600 to-green-500 group-hover:w-full transition-all duration-500 delay-100"></div>
             </h3>
 
             {/* Description */}
-            <p className="text-base text-gray-800 mb-4 flex-1 leading-relaxed group-hover:text-blue-900 transition-colors duration-300">
+            <p className="text-base text-gray-800 mb-4 flex-1 leading-relaxed group-hover:text-green-900 transition-colors duration-300">
               {project.description}
             </p>
 
@@ -146,7 +146,7 @@ const ProjectList = ({ projects = [] }) => {
               {project.tags.map((tag, tagIdx) => (
                 <span
                   key={tagIdx}
-                  className="relative px-3 py-1 text-sm font-medium rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 border border-blue-300 hover:from-blue-200 hover:to-purple-200 hover:border-blue-400 transition-all duration-300 transform hover:scale-105"
+                  className="relative px-3 py-1 text-sm font-medium rounded-full bg-gradient-to-r from-green-100 to-green-50 text-green-800 border border-green-300 hover:from-green-200 hover:to-green-100 hover:border-green-400 transition-all duration-300 transform hover:scale-105"
                   style={{
                     transitionDelay: `${tagIdx * 50}ms`
                   }}
@@ -162,7 +162,7 @@ const ProjectList = ({ projects = [] }) => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/btn flex-1 relative overflow-hidden px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="group/btn flex-1 relative overflow-hidden px-6 py-3 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <span className="relative z-10 flex items-center justify-center">
                   <svg className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -170,7 +170,7 @@ const ProjectList = ({ projects = [] }) => {
                   </svg>
                   View Live
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-700 to-green-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
               </a>
               
               <button className="group/btn relative overflow-hidden px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-xl font-semibold hover:bg-white/20 hover:border-white/30 transition-all duration-300 transform hover:scale-105">
@@ -182,7 +182,7 @@ const ProjectList = ({ projects = [] }) => {
           </div>
 
           {/* Decorative Elements */}
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 via-green-400 to-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
           
           {/* Floating Particles */}
           {hoveredCard === idx && (
@@ -190,7 +190,7 @@ const ProjectList = ({ projects = [] }) => {
               {[...Array(5)].map((_, i) => (
                 <div
                   key={i}
-                  className="absolute w-1 h-1 bg-blue-400 rounded-full animate-float opacity-70"
+                  className="absolute w-1 h-1 bg-green-400 rounded-full animate-float opacity-70"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,

@@ -16,7 +16,7 @@ const Footer = () => (
                         <a href="https://www.linkedin.com/in/adebayoadeyemiaa" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                             <i className="fab fa-linkedin-in text-xl"></i>
                         </a>
-                        <a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
+                        <a href="https://x.com/adeyemi9911?t=BVCtjrpO07l4or5y44Yl9g&s=09" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                             <i className="fab fa-twitter text-xl"></i>
                         </a>
                         {/* <a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
@@ -46,7 +46,7 @@ const Footer = () => (
                         />
                         <button
                             type="submit"
-                            className="bg-blue-600 text-white px-4 py-2 rounded-r-lg !rounded-button cursor-pointer whitespace-nowrap"
+                            className="bg-green-600 text-white px-4 py-2 rounded-r-lg !rounded-button cursor-pointer whitespace-nowrap"
                         >
                             <i className="fas fa-paper-plane"></i>
                         </button>

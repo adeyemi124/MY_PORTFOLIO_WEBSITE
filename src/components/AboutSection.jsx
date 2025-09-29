@@ -15,8 +15,8 @@ const AboutSection = () => (
           <div className="space-y-8">
             <div className="flex items-start">
               <div className="flex-shrink-0 mt-1">
-                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                  <i className="fas fa-rocket text-blue-600"></i>
+                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                  <i className="fas fa-rocket text-green-600"></i>
                 </div>
               </div>
               <div className="ml-4">
@@ -28,8 +28,8 @@ const AboutSection = () => (
             </div>
             <div className="flex items-start">
               <div className="flex-shrink-0 mt-1">
-                <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
-                  <i className="fas fa-comments text-purple-600"></i>
+                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                  <i className="fas fa-comments text-green-600"></i>
                 </div>
               </div>
               <div className="ml-4">
@@ -41,8 +41,8 @@ const AboutSection = () => (
             </div>
             <div className="flex items-start">
               <div className="flex-shrink-0 mt-1">
-                <div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
-                  <i className="fas fa-lightbulb text-indigo-600"></i>
+                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                  <i className="fas fa-lightbulb text-green-600"></i>
                 </div>
               </div>
               <div className="ml-4">
@@ -57,15 +57,15 @@ const AboutSection = () => (
           
           <div className="grid grid-cols-3 gap-6 mt-10">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">90%+</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">90%+</div>
               <div className="text-gray-600">Client Satisfaction Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">100%</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">100%</div>
               <div className="text-gray-600">On-time Delivery Record</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-indigo-600 mb-2">10+</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">10+</div>
               <div className="text-gray-600">Projects Delivered</div>
             </div>
           </div>
