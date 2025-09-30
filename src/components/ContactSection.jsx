@@ -47,7 +47,7 @@ const ContactSection = () => (
               <a href="https://www.linkedin.com/in/adebayoadeyemiaa" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">
+              <a href="https://x.com/adeyemi9911?t=BVCtjrpO07l4or5y44Yl9g&s=09" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">
                 <i className="fab fa-twitter"></i>
               </a>
               {/* <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">

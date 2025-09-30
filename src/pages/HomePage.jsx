@@ -48,6 +48,12 @@ const HomePage = () => {
        description: 'End-to-end development from concept to deployment with modern tech stacks.',
        icon: 'fas fa-layer-group'
      }
+    ,
+    {
+      title: 'Penetration Testing',
+      description: 'Security-first assessments to identify vulnerabilities, simulate real-world attacks, and harden your applications before they reach production.',
+      icon: 'fas fa-shield-alt'
+    }
    ];
  
 
@@ -135,6 +141,11 @@ const HomePage = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
             <div className="flex items-center">
+                <img
+                  src="https://res.cloudinary.com/dw1gzsri4/image/upload/v1759222553/ChatGPT_Image_Sep_30_2025_09_53_58_AM_d3by2m.png"
+                  alt="Adebayo Adeyemi logo"
+                  className="w-10 h-10 rounded-full mr-3 object-cover"
+                />
                 <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer">Adebayo Adeyemi</span>
             </div>
             <div className="hidden md:flex items-center space-x-10">

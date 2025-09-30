@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { TextPlugin } from 'gsap/TextPlugin';
+
+gsap.registerPlugin(TextPlugin);
 
 const ModernHeroSection = ({ isVisible: parentVisible }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentTech, setCurrentTech] = useState(0);
+  const magneticButton = useRef(null);
+  const headingTextRef = useRef(null);
 
-  const techStack = ['Javascript', 'React', 'Node.js', 'TypeScript', 'Next.js', 'MongoDB', 'Supabase'];
+  const techStack = [ 'HTML', 'CSS', 'Javascript', 'React', 'Node.js', 'TypeScript', 'Next.js', 'MongoDB', 'Supabase', 'Penetration Testing'];
 
   useEffect(() => {
     setIsVisible(true);
@@ -12,6 +18,47 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
       setCurrentTech((prev) => (prev + 1) % techStack.length);
     }, 2000);
     return () => clearInterval(techInterval);
+  }, [techStack.length]);
+
+  // Text animation for the main green heading using GSAP TextPlugin
+  useEffect(() => {
+    const el = headingTextRef.current;
+    if (!el) return undefined;
+    // start from empty and animate to the string for a subtle typing effect
+    try {
+      gsap.set(el, { text: '' });
+      gsap.to(el, { duration: 1.6, text: 'Digital Solutions', ease: 'power1.inOut' });
+    } catch (e) {
+      // If TextPlugin isn't available for some reason, fail silently
+      // leaving the existing text in place.
+      console.warn('GSAP TextPlugin animation failed', e);
+    }
+    return undefined;
+  }, []);
+
+  // Magnetic button effect for the primary CTA
+  useEffect(() => {
+    const btn = magneticButton.current;
+    if (!btn) return undefined;
+
+    const handleMouseMove = (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.3, ease: 'power2.out' });
+    };
+
+    const handleMouseLeave = () => {
+      gsap.to(btn, { x: 0, y: 0, duration: 0.3, ease: 'power2.out' });
+    };
+
+    btn.addEventListener('mousemove', handleMouseMove);
+    btn.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      btn.removeEventListener('mousemove', handleMouseMove);
+      btn.removeEventListener('mouseleave', handleMouseLeave);
+    };
   }, []);
 
   // Use parent's isVisible if provided, else use local
@@ -43,13 +90,13 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
             </div>
             {/* Main Heading */}
             <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <span className="text-white">We Build</span>
+              <span className="text-white">We Build Secure End-to-End</span>
               <br />
               <span className="text-green-400">
                 Digital Solutions
               </span>
               <br />
-              <span className="text-white">To Problems</span>
+              <span className="text-white">For Individuals & Businesses</span>
             </h1>
             {/* Dynamic Tech Stack */}
             <div className={`mb-8 transition-all duration-1000 delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -73,7 +120,7 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
             </div>
             {/* Description */}
             <p className={`text-xl text-gray-300 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed transition-all duration-1000 delay-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              I transform complex problems into elegant software solutions. Crafting digital experiences that help businesses thrive in the modern world.
+              We help individuals and businesses build strong digital foundations, overcome security vulnerabilities, and improve user experiences through reliable and secure digital solutions that drive growth and scalable online presence.
             </p>
             {/* CTA Buttons */}
             <div className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transition-all duration-1000 delay-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -103,7 +150,7 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
             {/* Stats */}
             <div className={`mt-12 grid grid-cols-3 gap-8 transition-all duration-1000 delay-900 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-white mb-1">50+</div>
+                <div className="text-3xl font-bold text-white mb-1">20+</div>
                 <div className="text-gray-400 text-sm">Projects</div>
               </div>
               <div className="text-center lg:text-left">
@@ -111,7 +158,7 @@ const ModernHeroSection = ({ isVisible: parentVisible }) => {
                 <div className="text-gray-400 text-sm">Years Experience</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-white mb-1">100%</div>
+                <div className="text-3xl font-bold text-white mb-1">80% +</div>
                 <div className="text-gray-400 text-sm">Client Satisfaction</div>
               </div>
             </div>
