@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ServicesSection from '../components/ServicesSection';
 import ProjectList from '../components/ProjectList';
 import AboutSection from '../components/AboutSection';
@@ -9,29 +9,51 @@ import ModernHeroSection from '../components/ModernHeroSection';
 
 
 const HomePage = () => {
- const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navRef = useRef(null);
+  
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+  
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
  
- useEffect(() => {
-   setIsVisible(true);
- }, []);
- 
- const scrollToSection = (id) => {
-   const element = document.getElementById(id);
-   if (element) {
-     element.scrollIntoView({ behavior: 'smooth' });
-   }
- };
+  const handleMobileNav = (id) => {
+    setMobileMenuOpen(false);
+    scrollToSection(id);
+  };
+
+  // close mobile menu on outside click or Escape key
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (!mobileMenuOpen) return;
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && mobileMenuOpen) setMobileMenuOpen(false);
+    };
+
+    document.addEventListener('click', handleOutsideClick);
+    document.addEventListener('keydown', handleEscape);
+
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [mobileMenuOpen]);
 
 
 
-
-
-
-
-
-
-
- //* Services Section Data
+//* Services Section Data
    const services = [
      {
        title: 'Frontend Applications',
@@ -137,7 +159,7 @@ const HomePage = () => {
 
 
        {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm hover:shadow-md transition-shadow duration-300">
+  <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm hover:shadow-md transition-shadow duration-300">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
             <div className="flex items-center">
@@ -179,13 +201,32 @@ const HomePage = () => {
                 </button>
             </div>
             <div className="md:hidden flex items-center">
-                <button className="text-gray-700 hover:text-green-600 transition-colors duration-300 cursor-pointer">
-                    <i className="fas fa-bars text-2xl"></i>
-                </button>
+              <button
+                onClick={() => setMobileMenuOpen(prev => !prev)}
+                aria-expanded={mobileMenuOpen}
+                aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+                className="text-gray-700 hover:text-green-600 transition-colors duration-300 cursor-pointer p-2"
+              >
+                <i className={`${mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'} text-2xl`}></i>
+              </button>
             </div>
+         </div>
+     </div>
+        
+ </nav>
+    {/* Mobile menu (rendered outside nav so outside clicks close it) */}
+    {mobileMenuOpen && (
+      <div className="md:hidden fixed inset-x-0 top-[80px] bg-white/95 backdrop-blur-sm border-t border-gray-100 z-40">
+        <div className="px-4 pt-4 pb-6 space-y-3 max-w-7xl mx-auto">
+          <button onClick={() => handleMobileNav('services')} className="w-full text-left text-gray-700 py-2">Services</button>
+          <button onClick={() => handleMobileNav('projects')} className="w-full text-left text-gray-700 py-2">Projects</button>
+          <button onClick={() => handleMobileNav('about')} className="w-full text-left text-gray-700 py-2">About Me</button>
+          <button onClick={() => { setMobileMenuOpen(false); window.location.href = '#contact'; }} className="w-full text-left py-2">
+            <span className="inline-block bg-green-600 text-white px-4 py-2 rounded-full">Contact Me</span>
+          </button>
         </div>
-    </div>
-</nav>
+      </div>
+    )}
  
 
 
