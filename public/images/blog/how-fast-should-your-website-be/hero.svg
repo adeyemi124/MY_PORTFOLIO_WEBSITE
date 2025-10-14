@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" fill="none">
+  <rect width="1200" height="480" rx="12" fill="#0b1220"/>
+  <g transform="translate(48,48)">
+    <rect width="320" height="200" rx="12" fill="#06b6d4" opacity="0.08"/>
+    <rect x="360" y="24" width="720" height="40" rx="8" fill="#e6fffa" opacity="0.06"/>
+    <text x="360" y="56" fill="#e6fffa" font-family="Segoe UI, Roboto, sans-serif" font-size="28">How Fast Should Your Website Be?</text>
+  </g>
+</svg>

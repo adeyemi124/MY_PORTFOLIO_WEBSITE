@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160" viewBox="0 0 600 160">
+  <rect width="600" height="160" rx="12" fill="#07122b"/>
+  <g transform="translate(24,20)">
+    <rect x="0" y="0" width="84" height="84" rx="12" fill="#06b6d4" opacity="0.12"/>
+    <path d="M110 12h380v20H110zM110 44h300v12H110zM110 68h200v12H110z" fill="#e6fffa" opacity="0.08"/>
+  </g>
+  <text x="72" y="48" fill="#e6fffa" font-family="Segoe UI, Roboto, sans-serif" font-size="16">Article Overview</text>
+</svg>

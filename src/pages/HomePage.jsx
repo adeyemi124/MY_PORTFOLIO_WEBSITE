@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import ServicesSection from '../components/ServicesSection';
 import ProjectList from '../components/ProjectList';
 import AboutSection from '../components/AboutSection';
+import BlogSection from '../components/BlogSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import BackToTopButton from '../components/BackToTopButton';
@@ -23,6 +24,9 @@ const HomePage = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+ 
+  // WhatsApp contact link used for CTAs
+  const whatsappLink = 'https://wa.link/jjko7t';
  
   const handleMobileNav = (id) => {
     setMobileMenuOpen(false);
@@ -185,6 +189,13 @@ const HomePage = () => {
                     Projects
                     <span className="absolute left-0 bottom-[-2px] w-0 h-0.5 bg-green-600 transition-all duration-300 ease-out group-hover:w-full"></span>
                 </button>
+        <button
+          onClick={() => scrollToSection('blog')}
+          className="group text-gray-700 hover:text-green-600 transition-colors duration-300 cursor-pointer whitespace-nowrap relative text-lg"
+        >
+          Blog
+          <span className="absolute left-0 bottom-[-2px] w-0 h-0.5 bg-green-600 transition-all duration-300 ease-out group-hover:w-full"></span>
+        </button>
                 <button
                     onClick={() => scrollToSection('about')}
                     className="group text-gray-700 hover:text-green-600 transition-colors duration-300 cursor-pointer whitespace-nowrap relative text-lg"
@@ -192,13 +203,13 @@ const HomePage = () => {
                     About Me
                     <span className="absolute left-0 bottom-[-2px] w-0 h-0.5 bg-green-600 transition-all duration-300 ease-out group-hover:w-full"></span>
                 </button>
-                <button
-                    onClick={() => scrollToSection('contact')}
-                    className="relative bg-gradient-to-r from-green-600 to-green-500 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer whitespace-nowrap overflow-hidden text-lg"
-                >
-                    <span className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-10"></span>
-                    Contact Me
-                </button>
+        <button
+          onClick={() => window.open(whatsappLink, '_blank')}
+          className="relative bg-gradient-to-r from-green-600 to-green-500 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer whitespace-nowrap overflow-hidden text-lg"
+        >
+          <span className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-10"></span>
+          Contact Me
+        </button>
             </div>
             <div className="md:hidden flex items-center">
               <button
@@ -220,8 +231,9 @@ const HomePage = () => {
         <div className="px-4 pt-4 pb-6 space-y-3 max-w-7xl mx-auto">
           <button onClick={() => handleMobileNav('services')} className="w-full text-left text-gray-700 py-2">Services</button>
           <button onClick={() => handleMobileNav('projects')} className="w-full text-left text-gray-700 py-2">Projects</button>
+          <button onClick={() => handleMobileNav('blog')} className="w-full text-left text-gray-700 py-2">Blog</button>
           <button onClick={() => handleMobileNav('about')} className="w-full text-left text-gray-700 py-2">About Me</button>
-          <button onClick={() => { setMobileMenuOpen(false); window.location.href = '#contact'; }} className="w-full text-left py-2">
+          <button onClick={() => { setMobileMenuOpen(false); window.open(whatsappLink, '_blank'); }} className="w-full text-left py-2">
             <span className="inline-block bg-green-600 text-white px-4 py-2 rounded-full">Contact Me</span>
           </button>
         </div>
@@ -264,6 +276,9 @@ const HomePage = () => {
  
        {/* About Me Section */}
        <AboutSection />
+ 
+       {/* Blog Section */}
+       <BlogSection />
  
        {/* Contact Section */}
        <ContactSection />

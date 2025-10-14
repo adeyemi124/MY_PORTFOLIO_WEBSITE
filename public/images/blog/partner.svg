@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160" viewBox="0 0 600 160">
+  <rect width="600" height="160" rx="12" fill="#07122b"/>
+  <g transform="translate(24,20)" fill="#8b5cf6">
+    <rect x="0" y="12" width="72" height="72" rx="12" opacity="0.12"/>
+    <path d="M12 56c8-12 28-12 36 0" stroke="#8b5cf6" stroke-width="6" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="120" y="76" fill="#e6fffa" font-family="Segoe UI, Roboto, sans-serif" font-size="16">Security Partner</text>
+</svg>

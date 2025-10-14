@@ -16,7 +16,7 @@ const ContactSection = () => (
               </div>
               <div>
                 <h3 className="text-lg font-semibold">Email</h3>
-                <p className="text-gray-600">katamanda144@gmail.com</p>
+                <p className="text-gray-600">adeyemisaj@gmail.com</p>
               </div>
             </div>
             <div className="flex items-center">
@@ -25,7 +25,7 @@ const ContactSection = () => (
               </div>
               <div>
                 <h3 className="text-lg font-semibold">Location</h3>
-                <p className="text-gray-600">Ogbomoso, Oyo State, Nigeria.</p>
+                <p className="text-gray-600">Oyo State, Nigeria</p>
               </div>
             </div>
             <div className="flex items-center">
@@ -58,50 +58,15 @@ const ContactSection = () => (
         </div>
         <div className="md:w-1/2">
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <form className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-colors text-sm"
-                  placeholder="John Doe"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-colors text-sm"
-                  placeholder="john@example.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-colors text-sm"
-                  placeholder="Project Inquiry"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-colors text-sm"
-                  placeholder="Tell me about your project..."
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-green-600 to-green-500 text-white py-3 rounded-lg shadow-md hover:shadow-lg transition-all !rounded-button cursor-pointer whitespace-nowrap"
-              >
-                Send Message
-              </button>
-            </form>
+            <iframe
+              src="https://www.google.com/maps?q=Oyo%20State%2C%20Nigeria&z=7&output=embed"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              title="Google Map of Oyo State, Nigeria"
+            />
           </div>
         </div>
       </div>

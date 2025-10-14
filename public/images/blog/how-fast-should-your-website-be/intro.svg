@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160" viewBox="0 0 600 160">
+  <rect width="600" height="160" rx="12" fill="#07122b"/>
+  <g transform="translate(24,20)">
+    <circle cx="48" cy="48" r="36" fill="#60a5fa" opacity="0.12"/>
+    <text x="120" y="72" fill="#e6fffa" font-family="Segoe UI, Roboto, sans-serif" font-size="16">Introduction</text>
+  </g>
+</svg>

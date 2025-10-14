@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160" viewBox="0 0 600 160">
+  <rect width="600" height="160" rx="12" fill="#06202a"/>
+  <g transform="translate(24,20)">
+    <rect x="0" y="0" width="92" height="92" rx="12" fill="#86efac" opacity="0.12"/>
+    <path d="M36 44h8v28h-8zM56 44h8v12h-8z" fill="#86efac"/>
+  </g>
+  <text x="140" y="76" fill="#e6fffa" font-family="Segoe UI, Roboto, sans-serif" font-size="16">Prevention</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160" viewBox="0 0 600 160">
+  <rect width="600" height="160" rx="12" fill="#061124"/>
+  <g transform="translate(24,20)" fill="#f97316">
+    <rect x="0" y="0" width="120" height="80" rx="8" fill="#fde68a" opacity="0.12"/>
+    <path d="M36 28c0-8 10-12 20-12s20 4 20 12-10 12-20 12-20-4-20-12z" fill="#f97316"/>
+  </g>
+  <text x="72" y="54" fill="#fff" font-family="Segoe UI, Roboto, sans-serif" font-size="16">Real Costs</text>
+</svg>
